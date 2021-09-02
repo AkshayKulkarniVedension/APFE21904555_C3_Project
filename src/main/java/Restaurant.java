@@ -76,8 +76,23 @@ public class Restaurant {
 
     public int getOrderValue(List <String> items) {
 
-    return 0;
+        int orderValue = 0;
+
+        for (String itemName : items) {
+            orderValue += getPrice(itemName);
+        }
+
+        return orderValue;
+
     }
 
+    private int getPrice (String name) {
+        for (Item item : this.menu) {
+            if (item.getName().equals(name)) {
+                return item.getPrice();
+            }
+        }
+        return 0;
+    }
 
 }
