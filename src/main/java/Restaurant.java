@@ -1,5 +1,7 @@
 
 
+
+
 import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
@@ -71,5 +73,11 @@ public class Restaurant {
     public String getName() {
         return name;
     }
+
+    public int getOrderValue(List <String> items) {
+
+    return 0;
+    }
+
 
 }
